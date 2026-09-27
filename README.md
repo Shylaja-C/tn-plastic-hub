@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TNPlasticHub
 
-## Getting Started
+**The Premier Digital Ecosystem for the Tamil Nadu Plastics Industry**
 
-First, run the development server:
+TNPlasticHub is a professional, scalable web platform designed to connect plastics manufacturing companies, students, entrepreneurs, and industry professionals in Tamil Nadu. The platform bridges the gap between academia and industry, facilitating business setup, internship matching, industrial visits, and knowledge transfer.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Key Features
+
+### 🏢 Industry & Enterprise Portal
+- **Business Setup Guide:** Step-by-step guidance for MSME registration, TNPCB approvals, and SIPCOT location sourcing.
+- **B2B Directory:** Verified network of suppliers, manufacturers, and recyclers.
+- **Talent Acquisition:** Tools to post internships, manage industrial visit schedules, and review candidate applications.
+
+### 🎓 Student & Academia Portal
+- **Opportunity Discovery:** Apply for verified internships across top manufacturing units.
+- **Industrial Visits:** Book and manage group visits to real-world factories.
+- **Technology Hub:** Learning resources covering Injection Moulding, Extrusion, Bioplastics, and Automation.
+
+### ⚙️ System Administration
+- **Global Overview:** Telemetry dashboards tracking total students, active internships, and platform health.
+- **Verification Queue:** Dedicated interface for reviewing and approving new company registrations.
+- **Content Management:** Tools to publish industry news, manage alerts, and update government schemes.
+
+## 💻 Tech Stack
+
+- **Framework:** [Next.js 15 (App Router)](https://nextjs.org/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+
+## 📁 Architecture Overview
+
+The application follows a modular Next.js architecture, completely pre-configured for future backend API integration:
+
+```text
+src/
+├── app/                  # Next.js App Router
+│   ├── admin/            # Admin Dashboard Layout & Pages
+│   ├── industry/         # Enterprise Dashboard Layout & Pages
+│   ├── student/          # Student Dashboard Layout & Pages
+│   ├── internships/      # Public Opportunities
+│   └── ...               # Core static routes (news, schemes, setup)
+├── components/           # Reusable UI components
+│   ├── layout/           # Global Navbar & Footer
+│   └── ui/               # shadcn primitive components (Card, Button, Table, etc.)
+└── lib/                  # Utilities (Tailwind cn merge, etc.)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
+- Node.js 18.17 or later
+- npm or yarn
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Shylaja-C/tn-plastic-hub.git
+   cd tn-plastic-hub
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Access the platform:**
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+   - **Main Portal:** `/`
+   - **Student Dashboard:** `/student`
+   - **Industry Dashboard:** `/industry`
+   - **Admin Dashboard:** `/admin`
 
-## Deploy on Vercel
+## 🔮 Future Roadmap
+- Integration with Node.js/PostgreSQL backend architecture for dynamic data loading.
+- Implementation of `NextAuth.js` or `Clerk` for rigorous Role-Based Access Control (RBAC).
+- AI Assistant integration utilizing LLM APIs for automated industry and scheme consultation.
+- Real-time application tracking, chat, and notification systems.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Built for the future of Tamil Nadu's manufacturing sector.*
