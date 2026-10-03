@@ -38,14 +38,14 @@ export default function Home() {
               <span className="text-primary">Plastics Industry</span>
             </h1>
             <p className="mx-auto max-w-[800px] text-lg sm:text-xl text-muted-foreground leading-relaxed">
-              TNPlasticHub connects industries, students, entrepreneurs, and professionals with verified industry information, career opportunities, and advanced technology resources.
+              PlasticX connects industries, students, entrepreneurs, and professionals with verified industry information, career opportunities, and advanced technology resources.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-8">
               <Link href="/industry-setup" className={cn(buttonVariants({ size: "lg" }), "h-12 px-8 text-base font-semibold")}>
                 Explore Industry Setup
               </Link>
               <Link href="/ai-assistant" className={cn(buttonVariants({ size: "lg", variant: "outline" }), "h-12 px-8 text-base font-semibold bg-background")}>
-                <Bot className="mr-2 h-5 w-5" /> Ask TNPlasticHub AI
+                <Bot className="mr-2 h-5 w-5" /> Ask PlasticX AI
               </Link>
             </div>
           </div>
@@ -399,7 +399,7 @@ export default function Home() {
             Get instant, verified answers regarding setup procedures, government schemes, technology processes, and compliance from our intelligent assistant.
           </p>
           <Link href="/ai-assistant" className={cn(buttonVariants({ size: "lg", variant: "secondary" }), "h-14 px-10 text-lg font-bold text-primary shadow-lg hover:shadow-xl transition-shadow")}>
-            <Bot className="mr-2 h-5 w-5" /> Ask TNPlasticHub AI
+            <Bot className="mr-2 h-5 w-5" /> Ask PlasticX AI
           </Link>
         </div>
       </section>

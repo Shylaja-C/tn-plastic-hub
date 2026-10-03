@@ -1,8 +1,8 @@
-# TNPlasticHub
+# PlasticX
 
 **The Premier Digital Ecosystem for the Tamil Nadu Plastics Industry**
 
-TNPlasticHub is a professional, scalable web platform designed to connect plastics manufacturing companies, students, entrepreneurs, and industry professionals in Tamil Nadu. The platform bridges the gap between academia and industry, facilitating business setup, internship matching, industrial visits, and knowledge transfer.
+PlasticX is a professional, scalable web platform designed to connect plastics manufacturing companies, students, entrepreneurs, and industry professionals in Tamil Nadu. The platform bridges the gap between academia and industry, facilitating business setup, internship matching, industrial visits, and knowledge transfer.
 
 ## 🚀 Key Features
 

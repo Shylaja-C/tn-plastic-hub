@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TNPlasticHub - Professional Plastics Industry Ecosystem",
+  title: "PlasticX - Professional Plastics Industry Ecosystem",
   description: "The premier digital platform for the Tamil Nadu plastics industry, connecting companies, professionals, students, and entrepreneurs.",
 };
 
