@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search, Menu, Factory } from 'lucide-react';
@@ -19,10 +20,7 @@ export function Navbar() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-6 md:gap-10">
           <Link href="/" className="flex items-center space-x-2">
-            <Factory className="h-6 w-6 text-primary" />
-            <span className="inline-block font-bold sm:text-xl tracking-tight text-primary">
-              TNPlasticHub
-            </span>
+            <Image src="/logo.png" alt="TNPlasticHub Logo" width={140} height={40} className="h-8 w-auto object-contain" />
           </Link>
           <nav className="hidden md:flex gap-6">
             {navigation.map((item) => (
@@ -59,8 +57,7 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="left" className="pr-0">
               <Link href="/" className="flex items-center space-x-2 mb-8">
-                <Factory className="h-6 w-6 text-primary" />
-                <span className="font-bold">TNPlasticHub</span>
+                <Image src="/logo.png" alt="TNPlasticHub Logo" width={140} height={40} className="h-8 w-auto object-contain" />
               </Link>
               <nav className="flex flex-col gap-4">
                 {navigation.map((item) => (

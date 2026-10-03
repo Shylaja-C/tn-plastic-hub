@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Factory } from 'lucide-react';
 
 export function Footer() {
@@ -8,8 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center space-x-2">
-              <Factory className="h-6 w-6 text-primary" />
-              <span className="font-bold text-xl tracking-tight text-primary">TNPlasticHub</span>
+              <Image src="/logo.png" alt="TNPlasticHub Logo" width={140} height={40} className="h-8 w-auto object-contain" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               The premier professional digital ecosystem connecting the Tamil Nadu plastics industry, facilitating growth, innovation, and career opportunities.
