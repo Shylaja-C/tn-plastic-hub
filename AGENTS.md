@@ -1,9 +1,15 @@
-<!-- BEGIN:nextjs-agent-rules -->
+Project: TNPlasticHub. FastAPI backend in /backend, Next.js (App Router, TypeScript,
+Tailwind, existing shadcn components) frontend in /frontend. Frontend calls
+NEXT_PUBLIC_API_URL=http://127.0.0.1:8000/api/v1.
 
-# This is NOT the Next.js you know
-
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
-
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
-
-<!-- END:nextjs-agent-rules -->
+Working rules (to save credits):
+- NEVER open or search node_modules, .next, .venv, package-lock.json, tsconfig.tsbuildinfo.
+- Read only the files named in the task. Do not scan the whole repo.
+- Make minimal edits; do not rewrite files that already work. Do not add dependencies.
+- Reuse existing components in src/components/ui and helpers in src/lib/api.ts.
+- Do not run `npm install`, `npm run build` or the dev server repeatedly. Verify once
+  at the end of a task: `npx tsc --noEmit` (frontend) or `python -c "import app.main"`
+  (backend, with DATABASE_URL=postgresql+psycopg2://u:p@localhost/x).
+- No browser/screenshot testing unless I ask.
+- Finish with a short changelog (file: one line each). No long explanations.
+- Never print or commit contents of .env files.

@@ -1,8 +1,17 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ── Node / Frontend ──────────────────────────────────────────────────────────
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+frontend/next-env.d.ts
+frontend/*.tsbuildinfo
+frontend/.env
+frontend/.env.local
+frontend/.env*.local
 
-# dependencies
-/node_modules
-/.pnp
+# pnp
+.pnp
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -10,32 +19,31 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
+# ── Python / Backend ─────────────────────────────────────────────────────────
+backend/.venv/
+backend/__pycache__/
+backend/app/__pycache__/
+backend/app/**/__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
 
-# next.js
-/.next/
-/out/
+# Backend env — never commit secrets
+backend/.env
 
-# production
-/build
-
-# misc
+# ── General ───────────────────────────────────────────────────────────────────
 .DS_Store
 *.pem
-
-# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
+/coverage
 *.tsbuildinfo
-next-env.d.ts
+
+# Uploads directory (runtime files, not source)
+backend/uploads/
