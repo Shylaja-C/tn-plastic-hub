@@ -1,8 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Users, Building2, Briefcase, MapPin, ShieldCheck, BookOpen, Loader2, CheckCircle2, XCircle } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Loader2, CheckCircle2, XCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
@@ -56,49 +55,61 @@ export default function AdminDashboardPage() {
     </div>
   );
 
-  const statCards = stats ? [
-    { title: 'Total Students', value: stats.users.students, icon: Users },
-    { title: 'Total Companies', value: stats.companies.total, icon: Building2 },
-    { title: 'Active Internships', value: stats.internships.active, icon: Briefcase },
-    { title: 'Industrial Visits', value: stats.industrial_visits.total, icon: MapPin },
-    { title: 'Pending Verifications', value: stats.companies.pending_verification, icon: ShieldCheck, alert: true },
-    { title: 'Published News', value: stats.news.published, icon: BookOpen },
+  const statItems = stats ? [
+    { label: 'Students',             value: stats.users.students },
+    { label: 'Companies',            value: stats.companies.total },
+    { label: 'Verified Companies',   value: stats.companies.verified },
+    { label: 'Active Internships',   value: stats.internships.active },
+    { label: 'Industrial Visits',    value: stats.industrial_visits.total },
+    { label: 'Published News',       value: stats.news.published },
+    { label: 'Pending Verification', value: stats.companies.pending_verification, alert: true },
   ] : [];
 
   return (
     <div className="space-y-8">
+      {/* Header */}
       <div>
-        <h1 className="text-3xl font-bold tracking-tight">System Administration</h1>
-        <p className="text-muted-foreground mt-2">Platform overview and global management.</p>
+        <h1 className="text-2xl font-bold tracking-tight">System Administration</h1>
+        <p className="text-sm text-muted-foreground mt-1">Platform overview and global management.</p>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-        {statCards.map((s) => (
-          <Card key={s.title} className={s.alert ? 'border-amber-500/50 bg-amber-50/50 dark:bg-amber-950/10' : ''}>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-xs font-medium">{s.title}</CardTitle>
-              <s.icon className={`h-4 w-4 ${s.alert ? 'text-amber-500' : 'text-muted-foreground'}`} />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{s.value}</div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      {/* Stats strip — plain numbers, no icons */}
+      {stats && (
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-px border rounded-lg overflow-hidden bg-border">
+          {statItems.map((s) => (
+            <div
+              key={s.label}
+              className={`bg-background px-4 py-4 ${s.alert && s.value > 0 ? 'bg-amber-50' : ''}`}
+            >
+              <p className={`text-2xl font-bold tabular-nums ${s.alert && s.value > 0 ? 'text-amber-600' : ''}`}>
+                {s.value}
+              </p>
+              <p className="text-xs text-muted-foreground mt-0.5 leading-tight">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Company Verification Queue</CardTitle>
-          <CardDescription>Review and approve new industry registrations.</CardDescription>
-        </CardHeader>
-        <CardContent>
+      {/* Verification queue */}
+      <section className="space-y-3">
+        <div className="flex items-center justify-between">
+          <h2 className="text-sm font-semibold">
+            Verification Queue
+            {pending.length > 0 && (
+              <span className="ml-2 inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-700 text-xs font-semibold h-5 px-2">
+                {pending.length}
+              </span>
+            )}
+          </h2>
+        </div>
+        <div className="border rounded-lg overflow-hidden">
           {pending.length === 0 ? (
             <p className="text-sm text-muted-foreground py-8 text-center">No pending verifications.</p>
           ) : (
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Company Name</TableHead>
+                  <TableHead>Company</TableHead>
                   <TableHead>Location</TableHead>
                   <TableHead>Type</TableHead>
                   <TableHead>Submitted</TableHead>
@@ -109,23 +120,31 @@ export default function AdminDashboardPage() {
                 {pending.map((c) => (
                   <TableRow key={c.id}>
                     <TableCell className="font-medium">{c.name}</TableCell>
-                    <TableCell>{c.city ?? c.district ?? '—'}</TableCell>
-                    <TableCell><Badge variant="secondary" className="capitalize">{c.company_type}</Badge></TableCell>
-                    <TableCell className="text-muted-foreground text-sm">
+                    <TableCell className="text-muted-foreground text-sm">{c.city ?? c.district ?? '—'}</TableCell>
+                    <TableCell>
+                      <Badge variant="secondary" className="capitalize">{c.company_type}</Badge>
+                    </TableCell>
+                    <TableCell className="text-muted-foreground text-xs tabular-nums">
                       {new Date(c.created_at).toLocaleDateString()}
                     </TableCell>
                     <TableCell>
                       <div className="flex gap-2">
                         <Button
-                          size="sm" variant="outline"
+                          size="sm"
+                          variant="outline"
                           className="gap-1 text-green-600 border-green-300 hover:bg-green-50"
                           disabled={verifying === c.id}
                           onClick={() => handleVerify(c.id, 'verified')}
                         >
-                          <CheckCircle2 className="h-3.5 w-3.5" /> Approve
+                          {verifying === c.id
+                            ? <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                            : <CheckCircle2 className="h-3.5 w-3.5" />
+                          }
+                          Approve
                         </Button>
                         <Button
-                          size="sm" variant="outline"
+                          size="sm"
+                          variant="outline"
                           className="gap-1 text-red-600 border-red-300 hover:bg-red-50"
                           disabled={verifying === c.id}
                           onClick={() => handleVerify(c.id, 'rejected')}
@@ -139,8 +158,8 @@ export default function AdminDashboardPage() {
               </TableBody>
             </Table>
           )}
-        </CardContent>
-      </Card>
+        </div>
+      </section>
     </div>
   );
 }
