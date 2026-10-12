@@ -29,7 +29,7 @@ class Settings(BaseSettings):
     APP_NAME: str = "TNPlasticHub"
     APP_ENV: str = "development"
     DEBUG: bool = True
-    ALLOWED_ORIGINS: str = "http://localhost:3000,http://127.0.0.1:3000,http://192.168.56.1:3000"
+    ALLOWED_ORIGINS: str = "http://localhost:3000,http://127.0.0.1:3000,http://192.168.56.1:3000,https://tn-plastic-hub.vercel.app"
 
     # ── Email ────────────────────────────────────────────────────────────────
     SMTP_HOST: str = ""
