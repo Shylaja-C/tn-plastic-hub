@@ -114,10 +114,10 @@ export default function ProductDetailPage() {
           <div className="p-6 sm:p-8 rounded-3xl border border-border bg-card shadow-sm space-y-4">
             
             <div className="flex flex-wrap items-center gap-2">
-              <span className="px-3 py-1 rounded-full text-xs font-bold bg-teal-50 dark:bg-teal-950/60 text-teal-800 dark:text-teal-300 border border-teal-200 dark:border-teal-800">
+              <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-50 dark:bg-blue-950/60 text-blue-800 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
                 {product.category}
               </span>
-              <span className="px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 flex items-center gap-1">
+              <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-50 dark:bg-blue-950/60 text-blue-800 dark:text-blue-300 border border-blue-200 dark:border-blue-800 flex items-center gap-1">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 TNPCB Certified Facility
               </span>
@@ -178,7 +178,7 @@ export default function ProductDetailPage() {
               </div>
               <div className="py-2.5 flex justify-between">
                 <span className="text-muted-foreground font-medium">State PCB Consent Order</span>
-                <span className="font-mono text-xs font-semibold text-teal-700 dark:text-teal-400 text-right">
+                <span className="font-mono text-xs font-semibold text-blue-700 dark:text-blue-400 text-right">
                   {product.tnpcbConsentNo}
                 </span>
               </div>
@@ -188,7 +188,7 @@ export default function ProductDetailPage() {
           {/* Supplier Trust & Logistics Note */}
           <div className="p-6 rounded-3xl border border-border bg-slate-50 dark:bg-slate-900/50 space-y-3">
             <h3 className="text-sm font-bold text-foreground flex items-center gap-2">
-              <Truck className="w-4 h-4 text-teal-600" />
+              <Truck className="w-4 h-4 text-blue-600" />
               Tamil Nadu Logistics & Weighment Guarantee
             </h3>
             <p className="text-xs text-muted-foreground leading-relaxed">
@@ -214,21 +214,21 @@ export default function ProductDetailPage() {
                   {product.location}
                 </p>
               </div>
-              <div className="w-10 h-10 rounded-2xl bg-teal-50 dark:bg-teal-950/60 border border-teal-200 flex items-center justify-center font-bold text-teal-700">
+              <div className="w-10 h-10 rounded-2xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 flex items-center justify-center font-bold text-blue-700">
                 <Building2 className="w-5 h-5" />
               </div>
             </div>
 
             <div className="pt-3 border-t border-border flex items-center justify-between text-xs text-muted-foreground">
               <span>Member Since: <strong>2023</strong></span>
-              <span className="text-emerald-600 font-bold flex items-center gap-1">
+              <span className="text-blue-600 font-bold flex items-center gap-1">
                 <Award className="w-3.5 h-3.5" /> 98% On-Time Dispatch
               </span>
             </div>
           </div>
 
           {/* Quote & Sample Inquiry Form */}
-          <div className="p-6 sm:p-7 rounded-3xl border border-teal-500/30 bg-card shadow-lg space-y-4">
+          <div className="p-6 sm:p-7 rounded-3xl border border-blue-500/30 bg-card shadow-lg space-y-4">
             
             {submitted ? (
               <div className="text-center py-8 space-y-3">

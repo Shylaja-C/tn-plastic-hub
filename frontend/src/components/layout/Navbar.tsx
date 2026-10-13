@@ -91,7 +91,7 @@ export function Navbar() {
       {/* ── Top Announcement / Trust Ribbon ── */}
       <div className="bg-secondary text-white text-[11px] font-medium py-1 px-4 text-center hidden lg:block tracking-wide">
         <span className="inline-flex items-center gap-1.5">
-          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
           Tamil Nadu Plastics Circularity Network — Connecting 850+ Verified Aggregators, Recyclers & Industries across 38 Districts
         </span>
       </div>
@@ -242,7 +242,7 @@ export function Navbar() {
             className="flex items-center gap-1 px-2.5 py-1.5 rounded-full border border-border hover:border-primary/50 bg-white dark:bg-slate-800 text-xs font-semibold text-foreground transition-all hover:bg-slate-50"
             title="Toggle Language / மொழியை மாற்றுக"
           >
-            <Globe className="w-3.5 h-3.5 text-teal-600" />
+            <Globe className="w-3.5 h-3.5 text-blue-600" />
             <span>{lang === 'en' ? 'தமிழ்' : 'English'}</span>
           </button>
 
@@ -368,7 +368,7 @@ export function Navbar() {
                       href={item.href}
                       className="px-3 py-2 text-xs font-medium text-foreground/80 hover:text-primary hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors flex items-center gap-2.5"
                     >
-                      <item.icon className="w-3.5 h-3.5 text-teal-600" />
+                      <item.icon className="w-3.5 h-3.5 text-blue-600" />
                       <span>{item.name}</span>
                     </Link>
                   ))}

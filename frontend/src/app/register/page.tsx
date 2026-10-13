@@ -86,7 +86,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="flex flex-1 items-center justify-center py-16 px-4 bg-gradient-to-b from-slate-50 via-white to-teal-50/30 dark:from-slate-950 dark:to-slate-900">
+    <div className="flex flex-1 items-center justify-center py-16 px-4 bg-gradient-to-b from-slate-50 via-white to-blue-50/30 dark:from-slate-950 dark:to-slate-900">
       <div className="w-full max-w-xl space-y-6">
         
         {/* Brand identity center */}
@@ -279,7 +279,7 @@ export default function RegisterPage() {
 
         {/* Trust Footnote */}
         <div className="flex items-center justify-center gap-1.5 text-[11px] text-muted-foreground text-center">
-          <ShieldCheck className="w-3.5 h-3.5 text-teal-600" />
+          <ShieldCheck className="w-3.5 h-3.5 text-blue-600" />
           <span>Compliant with Tamil Nadu Plastics Industry and Environmental Standards</span>
         </div>
 

@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ClientShell } from "@/components/layout/ClientShell";
+import { FloatingChatWidget } from "@/components/FloatingChatWidget";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
@@ -39,6 +40,7 @@ export default function RootLayout({
           <Navbar />
           <main className="flex-1 flex flex-col">{children}</main>
           <Footer />
+          <FloatingChatWidget />
         </ClientShell>
       </body>
     </html>

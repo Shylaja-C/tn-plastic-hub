@@ -47,7 +47,7 @@
 }
 
 :root {
-  /* ── Eco-Industrial Brand Palette (Tamil Nadu Plastic Hub) ──────── */
+  /* ── Industrial Polymer Brand Palette (Tamil Nadu Plastic Hub) ───── */
   --background:        #F8FAFC;
   --foreground:        #0F172A;
   --card:              #FFFFFF;
@@ -55,50 +55,49 @@
   --popover:           #FFFFFF;
   --popover-foreground:#0F172A;
 
-  /* Primary: Deep Teal / Emerald Green */
-  --primary:           #0F766E;
+  /* Primary: Deep Polymer Blue */
+  --primary:           #0B5ED7;
+  --primary-hover:     #0A4FB4;
+  --primary-dark:      #083D8C;
   --primary-foreground:#FFFFFF;
 
-  /* Secondary: Deep Industrial Navy */
-  --secondary:         #1E3A5F;
+  /* Secondary: Safety Orange (sparingly for CTAs) */
+  --secondary:         #F97316;
+  --secondary-hover:   #EA580C;
   --secondary-foreground: #FFFFFF;
 
-  /* Accent: Warm Solar Amber / Orange for high-converting CTAs */
-  --accent:            #F59E0B;
+  /* Accent: Cool Cyan Tint for badges/sections */
+  --accent:            #E0F2FE;
   --accent-foreground: #0F172A;
 
-  /* Eco Lime auxiliary token */
-  --eco-lime:          #84CC16;
-  --eco-lime-foreground:#0F172A;
-
   --muted:             #F1F5F9;
-  --muted-foreground:  #64748B;
+  --muted-foreground:  #475569;
 
   --destructive:       #DC2626;
   --destructive-foreground: #FFFFFF;
 
   --border:            #E2E8F0;
   --input:             #E2E8F0;
-  --ring:              #0F766E;
+  --ring:              #0B5ED7;
 
   --radius: 0.875rem; /* 14px modern rounded corners */
 
   /* ── Charts ─────────────────────────────────────────────────────── */
-  --chart-1: #0F766E;
-  --chart-2: #1E3A5F;
-  --chart-3: #F59E0B;
-  --chart-4: #84CC16;
-  --chart-5: #0284C7;
+  --chart-1: #0B5ED7;
+  --chart-2: #0F172A;
+  --chart-3: #F97316;
+  --chart-4: #38BDF8;
+  --chart-5: #7C3AED;
 
   /* ── Sidebar ────────────────────────────────────────────────────── */
   --sidebar:                    #FFFFFF;
   --sidebar-foreground:         #0F172A;
-  --sidebar-primary:            #0F766E;
+  --sidebar-primary:            #0B5ED7;
   --sidebar-primary-foreground: #FFFFFF;
   --sidebar-accent:             #F1F5F9;
-  --sidebar-accent-foreground:  #0F766E;
+  --sidebar-accent-foreground:  #0B5ED7;
   --sidebar-border:             #E2E8F0;
-  --sidebar-ring:               #0F766E;
+  --sidebar-ring:               #0B5ED7;
 }
 
 .dark {
@@ -109,17 +108,18 @@
   --popover:           #132235;
   --popover-foreground:#F8FAFC;
 
-  --primary:           #14B8A6;   /* luminous teal */
-  --primary-foreground:#042F2E;
+  /* Primary: Lighter blue for dark mode legibility */
+  --primary:           #3B82F6;
+  --primary-hover:     #2563EB;
+  --primary-dark:      #1D4ED8;
+  --primary-foreground:#FFFFFF;
 
-  --secondary:         #24426B;
-  --secondary-foreground: #F8FAFC;
+  --secondary:         #F97316;
+  --secondary-hover:   #EA580C;
+  --secondary-foreground: #FFFFFF;
 
-  --accent:            #F59E0B;
-  --accent-foreground: #0F172A;
-
-  --eco-lime:          #A3E635;
-  --eco-lime-foreground:#0F172A;
+  --accent:            #1E3A5F;
+  --accent-foreground: #F8FAFC;
 
   --muted:             #1A2C42;
   --muted-foreground:  #94A3B8;
@@ -129,22 +129,22 @@
 
   --border:            #1E344D;
   --input:             #1E344D;
-  --ring:              #14B8A6;
+  --ring:              #3B82F6;
 
-  --chart-1: #14B8A6;
+  --chart-1: #3B82F6;
   --chart-2: #38BDF8;
-  --chart-3: #FBBF24;
-  --chart-4: #A3E635;
-  --chart-5: #818CF8;
+  --chart-3: #F97316;
+  --chart-4: #A78BFA;
+  --chart-5: #34D399;
 
-  --sidebar:                    #132235;
+  --sidebar:                    #0F172A;
   --sidebar-foreground:         #F8FAFC;
-  --sidebar-primary:            #14B8A6;
-  --sidebar-primary-foreground: #042F2E;
+  --sidebar-primary:            #3B82F6;
+  --sidebar-primary-foreground: #FFFFFF;
   --sidebar-accent:             #1A2C42;
-  --sidebar-accent-foreground:  #14B8A6;
+  --sidebar-accent-foreground:  #3B82F6;
   --sidebar-border:             #1E344D;
-  --sidebar-ring:               #14B8A6;
+  --sidebar-ring:               #3B82F6;
 }
 
 @layer base {

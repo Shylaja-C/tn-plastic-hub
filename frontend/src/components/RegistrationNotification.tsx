@@ -27,11 +27,11 @@ function NotificationContent() {
 
   return (
     <div className="fixed top-20 right-4 sm:right-6 z-50 max-w-sm w-full animate-in slide-in-from-top-4 fade-in duration-300">
-      <div className="rounded-2xl border border-emerald-500/30 bg-white dark:bg-slate-900 p-4 shadow-2xl flex items-start gap-3 relative overflow-hidden">
+      <div className="rounded-2xl border border-blue-500/30 bg-white dark:bg-slate-900 p-4 shadow-2xl flex items-start gap-3 relative overflow-hidden">
         {/* Subtle accent highlight line */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-500 via-emerald-500 to-amber-500" />
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-blue-400 to-orange-400" />
 
-        <div className="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950/70 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+        <div className="w-9 h-9 rounded-xl bg-blue-100 dark:bg-blue-950/70 text-blue-600 flex items-center justify-center shrink-0 mt-0.5">
           <CheckCircle2 className="w-5 h-5" />
         </div>
 

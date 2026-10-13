@@ -262,8 +262,8 @@ export default function ProductsPage() {
             </p>
           </div>
 
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800 text-teal-800 dark:text-teal-300 text-xs font-bold shrink-0">
-            <ShieldCheck className="w-4 h-4 text-emerald-600" />
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-blue-800 dark:text-blue-300 text-xs font-bold shrink-0">
+            <ShieldCheck className="w-4 h-4 text-blue-600" />
             <span>{filteredProducts.length} Lots Available Today</span>
           </div>
         </div>
@@ -377,11 +377,11 @@ export default function ProductsPage() {
               <div>
                 {/* Header Tag + Verified badge */}
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-teal-50 dark:bg-teal-950/60 text-teal-800 dark:text-teal-300 border border-teal-200 dark:border-teal-800">
+                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/60 text-blue-800 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
                     {p.categoryLabel}
                   </span>
                   {p.verified && (
-                    <span className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
+                    <span className="text-[11px] font-bold text-blue-600 dark:text-blue-400 flex items-center gap-1">
                       <ShieldCheck className="w-3.5 h-3.5" />
                       Verified
                     </span>
@@ -483,7 +483,7 @@ export default function ProductsPage() {
               </div>
             ) : (
               <div>
-                <span className="text-[11px] font-bold text-teal-600 uppercase tracking-wider">
+                <span className="text-[11px] font-bold text-blue-600 uppercase tracking-wider">
                   Direct Factory Inquiry
                 </span>
                 <h3 className="text-lg font-extrabold text-foreground mt-0.5">

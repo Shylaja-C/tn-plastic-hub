@@ -106,7 +106,7 @@ async function InternshipRows() {
         >
           <div>
             <div className="flex items-center justify-between mb-2">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-teal-700 dark:text-teal-400 bg-teal-50 dark:bg-teal-950/60 px-2.5 py-0.5 rounded-full border border-teal-200/60 dark:border-teal-800/60">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/60 px-2.5 py-0.5 rounded-full border border-blue-200/60 dark:border-blue-800/60">
                 Internship
               </span>
               {i.stipend_amount != null && (
@@ -176,7 +176,7 @@ async function VisitList() {
         <div key={v.id} className="p-5 rounded-2xl border border-border bg-card hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between text-xs font-semibold text-muted-foreground mb-2">
-              <span className="flex items-center gap-1 text-teal-700 dark:text-teal-400">
+              <span className="flex items-center gap-1 text-blue-700 dark:text-blue-400">
                 <Calendar className="h-3.5 w-3.5" />
                 {new Date(v.visit_date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
               </span>
@@ -273,7 +273,7 @@ const featuredProducts = [
     location: 'Coimbatore, Tamil Nadu',
     verified: true,
     grade: 'Purity > 99.2%, PVC < 50ppm',
-    badgeColor: 'bg-emerald-50 text-emerald-800 border-emerald-200 dark:bg-emerald-950/60 dark:text-emerald-300 dark:border-emerald-800',
+    badgeColor: 'bg-blue-50 text-blue-800 border-blue-200 dark:bg-blue-950/60 dark:text-blue-300 dark:border-blue-800',
   },
   {
     id: 2,
@@ -318,10 +318,10 @@ export default function Home() {
     <div className="flex flex-col w-full overflow-hidden">
 
       {/* ── 1. Hero Section ──────────────────────────────────────────────────────── */}
-      <section className="relative border-b border-border bg-gradient-to-b from-teal-50/50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 pt-10 pb-16 lg:pt-16 lg:pb-24">
+      <section className="relative border-b border-border bg-gradient-to-b from-blue-50/50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 pt-10 pb-16 lg:pt-16 lg:pb-24">
         
         {/* Subtle background circular glow */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="container mx-auto px-4 sm:px-6 relative">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
@@ -329,14 +329,14 @@ export default function Home() {
             {/* Left Column: Value Prop + Action */}
             <div className="lg:col-span-7 space-y-6 text-left">
               
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100/80 dark:bg-teal-950/80 border border-teal-300/80 dark:border-teal-700/60 text-teal-900 dark:text-teal-200 text-xs font-bold tracking-wide">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100/80 dark:bg-blue-950/80 border border-blue-300/80 dark:border-blue-700/60 text-blue-900 dark:text-blue-200 text-xs font-bold tracking-wide">
+                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
                 Tamil Nadu Circular Plastics & Recycling Exchange
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black tracking-tight leading-[1.15] text-foreground">
                 Connecting Plastic Waste, Recyclers & Industries across{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-700 via-teal-600 to-amber-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-orange-500">
                   Tamil Nadu
                 </span>
               </h1>
@@ -376,15 +376,15 @@ export default function Home() {
               {/* Mini trust checklist */}
               <div className="flex flex-wrap items-center gap-y-2 gap-x-5 text-xs font-semibold text-muted-foreground pt-1">
                 <span className="flex items-center gap-1.5 text-foreground">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                  <CheckCircle2 className="w-4 h-4 text-blue-600" />
                   TNPCB & SIPCOT Aligned
                 </span>
                 <span className="flex items-center gap-1.5 text-foreground">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                  <CheckCircle2 className="w-4 h-4 text-blue-600" />
                   EPR Credit Facilitation
                 </span>
                 <span className="flex items-center gap-1.5 text-foreground">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                  <CheckCircle2 className="w-4 h-4 text-blue-600" />
                   Direct Factory-to-Factory Rates
                 </span>
               </div>
@@ -393,7 +393,7 @@ export default function Home() {
 
             {/* Right Column: Visual Eco-Industrial Hub Card / Illustration */}
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-slate-900 via-secondary to-teal-950 text-white shadow-2xl border border-teal-500/30 overflow-hidden">
+              <div className="relative rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-slate-900 via-[#0F172A] to-[#083D8C] text-white shadow-2xl border border-blue-500/30 overflow-hidden">
                 
                 {/* Visual recycling flow lines overlay */}
                 <div className="absolute -right-8 -bottom-8 opacity-20 pointer-events-none">
@@ -402,11 +402,11 @@ export default function Home() {
 
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-10 h-10 rounded-2xl bg-teal-500/20 border border-teal-400/40 flex items-center justify-center">
-                      <LogoIcon size={24} />
+                    <div className="w-10 h-10 rounded-2xl bg-blue-500/20 border border-blue-400/40 flex items-center justify-center">
+                       <LogoIcon size={24} />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-teal-300 uppercase tracking-widest">TN Plastic Hub</div>
+                      <div className="text-xs font-bold text-blue-300 uppercase tracking-widest">TN Plastic Hub</div>
                       <div className="text-sm font-semibold text-white">State Circular Engine</div>
                     </div>
                   </div>
@@ -419,7 +419,7 @@ export default function Home() {
                 <div className="space-y-3 relative z-10">
                   <div className="p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-between">
                     <div>
-                      <span className="text-xs text-teal-200 font-medium">PET Bottle Flakes (Clear)</span>
+                      <span className="text-xs text-blue-200 font-medium">PET Bottle Flakes (Clear)</span>
                       <p className="text-sm font-bold text-white">Coimbatore & Erode Clusters</p>
                     </div>
                     <div className="text-right">
@@ -430,18 +430,18 @@ export default function Home() {
 
                   <div className="p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-between">
                     <div>
-                      <span className="text-xs text-teal-200 font-medium">HDPE Blow Molding Regrind</span>
+                      <span className="text-xs text-blue-200 font-medium">HDPE Blow Molding Regrind</span>
                       <p className="text-sm font-bold text-white">Chennai & Ranipet Hubs</p>
                     </div>
                     <div className="text-right">
                       <div className="text-sm font-extrabold text-amber-400">₹66 - ₹71 / kg</div>
-                      <span className="text-[10px] text-teal-300 font-medium">Stable</span>
+                      <span className="text-[10px] text-blue-300 font-medium">Stable</span>
                     </div>
                   </div>
 
                   <div className="p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-between">
                     <div>
-                      <span className="text-xs text-teal-200 font-medium">PP Injection Reprocessed</span>
+                      <span className="text-xs text-blue-200 font-medium">PP Injection Reprocessed</span>
                       <p className="text-sm font-bold text-white">Madurai & Salem Units</p>
                     </div>
                     <div className="text-right">
@@ -453,7 +453,7 @@ export default function Home() {
 
                 <div className="mt-6 pt-5 border-t border-white/15 flex items-center justify-between text-xs text-slate-300">
                   <span className="flex items-center gap-1.5">
-                    <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                    <ShieldCheck className="w-4 h-4 text-blue-400" />
                     Verified GST & Pollution Clearance
                   </span>
                   <Link href="/products" className="font-bold text-amber-300 hover:underline">
@@ -483,7 +483,7 @@ export default function Home() {
             </div>
 
             <div className="border-r border-white/10 last:border-none pr-4">
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-teal-300">
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-blue-300">
                 850+ Units
               </div>
               <p className="text-xs sm:text-sm text-slate-300 font-medium mt-1">
@@ -501,7 +501,7 @@ export default function Home() {
             </div>
 
             <div>
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-teal-300">
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-blue-300">
                 ₹14.8 Cr+
               </div>
               <p className="text-xs sm:text-sm text-slate-300 font-medium mt-1">
@@ -531,7 +531,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
             <div className="p-6 rounded-2xl border border-border/80 bg-slate-50/60 dark:bg-slate-800/40 relative">
-              <div className="w-10 h-10 rounded-xl bg-teal-600 text-white font-black flex items-center justify-center text-sm mb-4">
+              <div className="w-10 h-10 rounded-xl bg-blue-600 text-white font-black flex items-center justify-center text-sm mb-4">
                 01
               </div>
               <h3 className="text-base font-bold text-foreground">Source & Post Scrap</h3>
@@ -541,7 +541,7 @@ export default function Home() {
             </div>
 
             <div className="p-6 rounded-2xl border border-border/80 bg-slate-50/60 dark:bg-slate-800/40 relative">
-              <div className="w-10 h-10 rounded-xl bg-teal-700 text-white font-black flex items-center justify-center text-sm mb-4">
+              <div className="w-10 h-10 rounded-xl bg-blue-700 text-white font-black flex items-center justify-center text-sm mb-4">
                 02
               </div>
               <h3 className="text-base font-bold text-foreground">Verified Matching</h3>
@@ -579,7 +579,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-8">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-teal-600">
+              <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
                 Verified Exchange
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight mt-1">
@@ -607,7 +607,7 @@ export default function Home() {
                     <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${p.badgeColor}`}>
                       {p.category}
                     </span>
-                    <span className="text-[11px] font-bold text-emerald-600 flex items-center gap-1">
+                    <span className="text-[11px] font-bold text-blue-600 flex items-center gap-1">
                       <ShieldCheck className="w-3 h-3" /> Verified
                     </span>
                   </div>
@@ -654,7 +654,7 @@ export default function Home() {
           <div>
             <div className="flex items-baseline justify-between mb-6">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-teal-600">
+                <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
                   Talent Pipeline
                 </span>
                 <h2 className="text-xl sm:text-2xl font-extrabold text-foreground">
@@ -674,7 +674,7 @@ export default function Home() {
           <div className="pt-8 border-t border-border/70">
             <div className="flex items-baseline justify-between mb-6">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-teal-600">
+                <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
                   Factory Exposure
                 </span>
                 <h2 className="text-xl sm:text-2xl font-extrabold text-foreground">
@@ -732,7 +732,7 @@ export default function Home() {
       <section className="py-16 bg-white dark:bg-slate-900 border-b border-border">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center max-w-xl mx-auto mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-600">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
               Reputation & Trust
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight mt-1">
@@ -746,7 +746,7 @@ export default function Home() {
                 &ldquo;TN Plastic Hub helped our recycling facility source over 45 metric tons of clean PET baled flakes directly from textile aggregators in Tiruppur. Transparent rates and verified lots.&rdquo;
               </p>
               <div className="mt-4 pt-3 border-t border-border/60 flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-teal-600 text-white font-bold text-xs flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-blue-600 text-white font-bold text-xs flex items-center justify-center">
                   R
                 </div>
                 <div>
@@ -805,7 +805,7 @@ export default function Home() {
       </section>
 
       {/* ── 8. Final CTA Banner ────────────────────────────────────────────────── */}
-      <section className="bg-gradient-to-r from-teal-900 via-secondary to-slate-900 text-white py-16">
+      <section className="bg-gradient-to-r from-[#083D8C] via-[#0B5ED7] to-slate-900 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 text-center max-w-3xl space-y-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-bold">
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />

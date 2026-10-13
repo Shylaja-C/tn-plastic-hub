@@ -71,7 +71,7 @@ export function Footer() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             <div className="lg:col-span-7 space-y-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-900/60 border border-teal-700/50 text-teal-300 text-xs font-semibold">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/60 border border-blue-700/50 text-blue-300 text-xs font-semibold">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 Tamil Nadu Circular Plastics Ecosystem
               </div>
@@ -85,8 +85,8 @@ export function Footer() {
 
             <div className="lg:col-span-5">
               {subscribed ? (
-                <div className="flex items-center gap-2.5 p-4 rounded-xl bg-teal-950/80 border border-teal-800/80 text-teal-300">
-                  <CheckCircle2 className="w-5 h-5 shrink-0 text-teal-400" />
+                <div className="flex items-center gap-2.5 p-4 rounded-xl bg-blue-950/80 border border-blue-800/80 text-blue-300">
+                  <CheckCircle2 className="w-5 h-5 shrink-0 text-blue-400" />
                   <p className="text-sm font-medium">Thank you for subscribing to TN Plastic Hub Weekly!</p>
                 </div>
               ) : (
@@ -98,7 +98,7 @@ export function Footer() {
                       placeholder="Enter your official or business email..."
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full h-11 pl-10 pr-4 rounded-xl bg-slate-800/90 border border-slate-700 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
+                      className="w-full h-11 pl-10 pr-4 rounded-xl bg-slate-800/90 border border-slate-700 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                     />
                     <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
                   </div>
@@ -134,11 +134,11 @@ export function Footer() {
 
             <div className="space-y-2 text-xs text-slate-400">
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-teal-400 shrink-0" />
+                <MapPin className="w-4 h-4 text-blue-400 shrink-0" />
                 <span>Chennai & Coimbatore Coordination Cells, Tamil Nadu</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-teal-400 shrink-0" />
+                <Phone className="w-4 h-4 text-blue-400 shrink-0" />
                 <span>+91 44 2852 4000 / helpdesk@tnplastichub.in</span>
               </div>
             </div>
@@ -148,7 +148,7 @@ export function Footer() {
               {['LinkedIn', 'Twitter', 'YouTube', 'WhatsApp'].map((platform) => (
                 <span
                   key={platform}
-                  className="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-slate-800 text-slate-300 hover:text-white hover:bg-teal-900/60 border border-slate-700 cursor-pointer transition-colors"
+                  className="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-slate-800 text-slate-300 hover:text-white hover:bg-blue-900/60 border border-slate-700 cursor-pointer transition-colors"
                 >
                   {platform}
                 </span>
@@ -159,7 +159,7 @@ export function Footer() {
           {/* Nav links */}
           {columns.map((col) => (
             <div key={col.heading} className="col-span-1 md:col-span-3 lg:col-span-2">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-teal-400 mb-4">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-blue-400 mb-4">
                 {col.heading}
               </h4>
               <ul className="space-y-2.5">

@@ -16,7 +16,7 @@ interface LogoProps {
  * 1. Circular Recycling Loop: 3 sweeping clockwise aerodynamic arcs representing circular economy and plastics reprocessing.
  * 2. Connected Hub Nodes: 3 circular connection points representing Suppliers, Recyclers, and Industrial Manufacturers.
  * 3. Subtle Tamil Nadu Motif: The central apex integrates the stepped silhouette of a Tamil Nadu Gopuram / temple tower.
- * 4. Vibrant eco-industrial color harmony: Deep Teal (#0F766E), Industrial Navy (#1E3A5F), Eco-Lime (#84CC16), and Amber Orange (#F59E0B).
+ * 4. Industrial polymer color harmony: Deep Blue (#0B5ED7), Industrial Navy (#0F172A), Safety Orange (#F97316), and Amber (#F59E0B).
  */
 export function LogoIcon({ className = 'w-9 h-9', size = 36 }: { className?: string; size?: number }) {
   return (
@@ -30,16 +30,16 @@ export function LogoIcon({ className = 'w-9 h-9', size = 36 }: { className?: str
       aria-label="TN Plastic Hub Logo Icon"
     >
       <defs>
-        {/* Teal gradient for recycling flow */}
-        <linearGradient id="tnph-teal-grad" x1="4" y1="8" x2="38" y2="44" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#14B8A6" />
-          <stop offset="100%" stopColor="#0F766E" />
+        {/* Blue gradient for recycling flow */}
+        <linearGradient id="tnph-blue-grad" x1="4" y1="8" x2="38" y2="44" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#3B82F6" />
+          <stop offset="100%" stopColor="#0B5ED7" />
         </linearGradient>
 
-        {/* Lime eco accent gradient */}
-        <linearGradient id="tnph-lime-grad" x1="16" y1="36" x2="44" y2="24" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#84CC16" />
-          <stop offset="100%" stopColor="#10B981" />
+        {/* Orange accent gradient */}
+        <linearGradient id="tnph-orange-grad" x1="16" y1="36" x2="44" y2="24" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#F97316" />
+          <stop offset="100%" stopColor="#EA580C" />
         </linearGradient>
 
         {/* Warm amber node gradient */}
@@ -52,41 +52,41 @@ export function LogoIcon({ className = 'w-9 h-9', size = 36 }: { className?: str
       {/* ── Circular Recycling Arc 1 (Top-Right to Bottom-Right) ── */}
       <path
         d="M24 6 C32.5 6 39.5 12 41.2 20.5"
-        stroke="url(#tnph-teal-grad)"
+        stroke="url(#tnph-blue-grad)"
         strokeWidth="3.6"
         strokeLinecap="round"
       />
-      <polygon points="43.5,21.5 37.5,21.5 40.5,15.5" fill="#0F766E" />
+      <polygon points="43.5,21.5 37.5,21.5 40.5,15.5" fill="#0B5ED7" />
 
       {/* ── Circular Recycling Arc 2 (Bottom-Right to Bottom-Left) ── */}
       <path
         d="M38 31 C33.8 38 26.2 41.5 18 40.5"
-        stroke="url(#tnph-lime-grad)"
+        stroke="url(#tnph-orange-grad)"
         strokeWidth="3.6"
         strokeLinecap="round"
       />
-      <polygon points="17,43.2 16.5,37 22.8,39.5" fill="#84CC16" />
+      <polygon points="17,43.2 16.5,37 22.8,39.5" fill="#F97316" />
 
       {/* ── Circular Recycling Arc 3 (Bottom-Left to Top-Left) ── */}
       <path
         d="M10 33 C6.5 25.5 8.2 16.5 14.5 10.5"
-        stroke="url(#tnph-teal-grad)"
+        stroke="url(#tnph-blue-grad)"
         strokeWidth="3.6"
         strokeLinecap="round"
       />
-      <polygon points="16,8.2 11,12 17.5,14" fill="#14B8A6" />
+      <polygon points="16,8.2 11,12 17.5,14" fill="#3B82F6" />
 
       {/* ── Central Tamil Nadu Gopuram / Hub Core Geometry ── */}
       {/* Base tier */}
       <path
         d="M17 31 L31 31 L29.5 26 L18.5 26 Z"
-        fill="#1E3A5F"
+        fill="#0F172A"
         opacity="0.95"
       />
       {/* Middle tier */}
       <path
         d="M19 25 L29 25 L27.8 20 L20.2 20 Z"
-        fill="#0F766E"
+        fill="#0B5ED7"
       />
       {/* Top tower tier & Kalasam finial */}
       <path
@@ -97,21 +97,21 @@ export function LogoIcon({ className = 'w-9 h-9', size = 36 }: { className?: str
 
       {/* ── Connected Hub Nodes (Ecosystem Integration) ── */}
       {/* Node 1: Recyclers (top right) */}
-      <circle cx="34" cy="14" r="3.2" fill="#FFFFFF" stroke="#0F766E" strokeWidth="2.2" />
-      <circle cx="34" cy="14" r="1.4" fill="#0F766E" />
+      <circle cx="34" cy="14" r="3.2" fill="#FFFFFF" stroke="#0B5ED7" strokeWidth="2.2" />
+      <circle cx="34" cy="14" r="1.4" fill="#0B5ED7" />
 
       {/* Node 2: Industries (bottom right) */}
-      <circle cx="36" cy="34" r="3.2" fill="#FFFFFF" stroke="#1E3A5F" strokeWidth="2.2" />
-      <circle cx="36" cy="34" r="1.4" fill="#1E3A5F" />
+      <circle cx="36" cy="34" r="3.2" fill="#FFFFFF" stroke="#0F172A" strokeWidth="2.2" />
+      <circle cx="36" cy="34" r="1.4" fill="#0F172A" />
 
       {/* Node 3: Suppliers & Waste Aggregators (left) */}
-      <circle cx="12" cy="24" r="3.2" fill="#FFFFFF" stroke="#84CC16" strokeWidth="2.2" />
-      <circle cx="12" cy="24" r="1.4" fill="#84CC16" />
+      <circle cx="12" cy="24" r="3.2" fill="#FFFFFF" stroke="#F97316" strokeWidth="2.2" />
+      <circle cx="12" cy="24" r="1.4" fill="#F97316" />
 
       {/* Network connector lines connecting nodes to core */}
-      <line x1="28" y1="18" x2="31" y2="15.5" stroke="#0F766E" strokeWidth="1.4" strokeDasharray="1.5 1.5" />
-      <line x1="28" y1="28" x2="33" y2="32" stroke="#1E3A5F" strokeWidth="1.4" strokeDasharray="1.5 1.5" />
-      <line x1="19" y1="24" x2="15.5" y2="24" stroke="#84CC16" strokeWidth="1.4" strokeDasharray="1.5 1.5" />
+      <line x1="28" y1="18" x2="31" y2="15.5" stroke="#0B5ED7" strokeWidth="1.4" strokeDasharray="1.5 1.5" />
+      <line x1="28" y1="28" x2="33" y2="32" stroke="#0F172A" strokeWidth="1.4" strokeDasharray="1.5 1.5" />
+      <line x1="19" y1="24" x2="15.5" y2="24" stroke="#F97316" strokeWidth="1.4" strokeDasharray="1.5 1.5" />
     </svg>
   );
 }
@@ -141,7 +141,7 @@ export function Logo({
       <div className="flex flex-col leading-none">
         <div className={`font-extrabold tracking-tight font-sans ${textSize}`}>
           <span className="text-secondary dark:text-slate-100">TN</span>
-          <span className="text-primary dark:text-teal-400"> Plastic</span>
+          <span className="text-primary dark:text-blue-400"> Plastic</span>
           <span className="text-amber-500 font-black"> Hub</span>
         </div>
         <span className={`font-semibold tracking-wider uppercase text-muted-foreground ${subSize} mt-0.5`}>
