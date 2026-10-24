@@ -150,7 +150,7 @@ def _call_gemini(
 
     try:
         import httpx
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={gemini_api_key}"
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key={gemini_api_key}"
         contents = []
         for h in history:
             role = "user" if h.get("role") == "user" else "model"
@@ -183,7 +183,7 @@ def _call_gemini(
                 return AIResponse(
                     answer=text,
                     confidence="high",
-                    model_used="gemini-2.0-flash",
+                    model_used="gemini-3.8-flash",
                 )
 
         error_data = resp.json() if "application/json" in resp.headers.get("content-type", "") else {}
@@ -192,7 +192,7 @@ def _call_gemini(
         return AIResponse(
             answer=f"AI service error: {err_msg}",
             confidence="low",
-            model_used="gemini-2.0-flash",
+            model_used="gemini-3.8-flash",
             error=err_msg,
         )
     except Exception as exc:
@@ -200,7 +200,7 @@ def _call_gemini(
         return AIResponse(
             answer="Sorry, an error occurred while connecting to the AI assistant.",
             confidence="low",
-            model_used="gemini-2.0-flash",
+            model_used="gemini-3.8-flash",
             error=str(exc),
         )
 
