@@ -37,10 +37,11 @@ export function AiChat({ emptyHint }: { emptyHint: string }) {
         ...prev,
         { role: 'assistant', content: res.answer, sources: res.sources },
       ]);
-    } catch {
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Sorry, something went wrong. Please try again.';
       setMessages((prev) => [
         ...prev,
-        { role: 'assistant', content: 'Sorry, something went wrong. Please try again.' },
+        { role: 'assistant', content: msg },
       ]);
     } finally {
       setLoading(false);

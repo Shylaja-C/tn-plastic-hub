@@ -47,3 +47,5 @@ yarn-error.log*
 
 # Uploads directory (runtime files, not source)
 backend/uploads/
+backend/venv/
+*.zip
